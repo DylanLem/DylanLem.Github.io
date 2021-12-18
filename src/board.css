@@ -1,0 +1,24 @@
+.Cell{
+  background: none;
+  
+
+  border-width: 1px;
+  border-style: ridge;
+  border-color: black;
+
+  min-height: 3vmin;
+  min-width: 3vmin;
+
+  font-size: 2vmin;
+
+  margin-top: 0px;
+}
+
+.Cell:hover{
+  background: rgba(227, 255, 71, 0.24);
+}
+
+.board-row{
+  display: flex;
+  flex-wrap: wrap;
+}
