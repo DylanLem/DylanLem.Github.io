@@ -3,11 +3,6 @@ import Level from '../Level.js'
 import '../board.css';
 
 export default class Board extends React.Component{
-  /*
-  Requires props:
-      height
-      width
-  */
   constructor(props){
     super(props);
 
@@ -18,31 +13,35 @@ export default class Board extends React.Component{
       viewPort: (25,25)
     };
 
-    this.createBoard = this.createBoard.bind(this);
+  
   }
 
-  createBoard = () => {
+  createBoard() {
     let board = [];
+    let x = this.state.viewPort[0];
+
 
     for(let i=0; i<this.state.viewPort[0]; i++){
       var row = [];
+
       for(let j=0; j<this.state.viewPort[1]; j++){
         row.push(<Cell />);
       }
-      board.push(<div className="board-row">{row}</div>);
 
+      board.push(<div className="board-row">{row}</div>);
     }
+
     return board;
   }
-
 
 
   render(){
     this.createBoard();
     return this.state.board;
   }
-
 }
+
+
 
  class Cell extends React.Component{
   constructor(props){
