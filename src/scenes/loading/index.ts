@@ -8,17 +8,22 @@ export class LoadingScene extends Scene{
         super('loading-scene');
       }
 
-      create(): void {
-        this.splash = this.add.sprite(600,300,"stay-tuned");
-        
-      }
-
       preload(): void{
         this.load.baseURL = 'assets/';
         // key: 'stay-tuned'
         this.load.image('stay-tuned', 'splash/stay-tuned.png');
+
+        this.load.image('chemp', 'sprites/chemp.png');
       }
 
+
+      create(): void {
+        this.splash = this.add.sprite(600,300,"stay-tuned");
+        
+        this.scene.start('home-scene')
+      }
+
+      
       
 
 }

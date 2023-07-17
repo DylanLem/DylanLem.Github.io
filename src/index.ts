@@ -1,5 +1,5 @@
 import {Game, Types} from 'phaser';
-import {LoadingScene} from './scenes';
+import {Home, LoadingScene} from './scenes';
 
 
 const gameConfig: Types.Core.GameConfig = {
@@ -33,7 +33,7 @@ const gameConfig: Types.Core.GameConfig = {
     audio: {
         disableWebAudio: false,
     },
-    scene: [LoadingScene],
+    scene: [LoadingScene, Home],
 
 
     
