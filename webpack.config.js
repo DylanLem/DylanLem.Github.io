@@ -22,6 +22,13 @@ const babelOptions = {
   ],
 };
 
+module.exports = {
+    resolve: {
+      extension: ['.js', '.ts']
+    }
+  
+}
+
 
 const config = {
   mode: isProd ? 'production' : 'development',
@@ -35,7 +42,7 @@ const config = {
     rules: [
       {
         test: /\.ts(x)?$/,
-        exclude: /node_modules/,
+        
         use: [
           {
             loader: 'babel-loader',
@@ -59,8 +66,11 @@ const config = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+    
   },
+
   resolve: {
+    
     extensions: ['.ts', '.js'],
   },
   optimization: {

@@ -1,0 +1,3 @@
+export enum chempState{
+    Idle
+}
