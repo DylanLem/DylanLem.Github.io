@@ -10,7 +10,7 @@ export class LoadingScene extends Scene{
 
       preload(): void{
         this.load.baseURL = 'assets/';
-        // key: 'stay-tuned'
+        
         this.load.image('stay-tuned', 'splash/stay-tuned.png');
 
         this.load.image('chemp', 'sprites/chemp.png');

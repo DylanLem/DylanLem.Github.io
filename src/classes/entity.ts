@@ -4,6 +4,8 @@ export class Entity extends Physics.Arcade.Sprite {
 
     constructor(scene: Phaser.Scene, x: number, y: number, texture: string, frame?: string | number){
         super(scene, x, y, texture, frame);
+
+        this.setDataEnabled();
         scene.add.existing(this);
         scene.physics.add.existing(this);
         this.getBody().setCollideWorldBounds(true);
