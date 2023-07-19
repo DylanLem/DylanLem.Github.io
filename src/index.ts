@@ -29,7 +29,7 @@ const gameConfig: Types.Core.GameConfig = {
         window.sizeChanged();
         },
     },
-    canvasStyle: `position: fixed; display: inline-block; width: 10%; height: 10%;`,
+    canvasStyle: `position: fixed; display: inline-block; width: 100%; height: 100%;`,
     autoFocus: true,
     audio: {
         disableWebAudio: false,
