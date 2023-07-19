@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "phaser": "^3.60.0"
+    "phaser": "^3.60.0",
+    "phaser3-rex-plugins": "^1.60.3",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -28,8 +30,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
-"scripts": {
-	"dev": "cross-env NODE_ENV=development webpack serve",
-	"build": "cross-env NODE_ENV=production webpack --progress "
-}
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack --progress "
+  }
 }

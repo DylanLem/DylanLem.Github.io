@@ -18,7 +18,7 @@ export class LoadingScene extends Scene{
 
 
       create(): void {
-        this.splash = this.add.sprite(600,300,"stay-tuned");
+        this.splash = this.add.sprite(300,300,"stay-tuned");
         console.log("finished loading :)")
         
         this.scene.start('home-scene')

@@ -1,15 +1,17 @@
 import { Vector } from "matter";
 import { Entity } from "./entity";
 import { GameObjects, Math } from "phaser";
-import { chempState } from "./enums";
+import { ChempState, Rarities } from "./enums";
 
 
 export class Chemp extends Entity{
 
-    public state : chempState;
+    public state : ChempState;
     
 
-
+    
+    private rarity: Rarities = 0;
+    
     private speed: number = 10;
 
     private initialized: boolean = false;
@@ -26,9 +28,10 @@ export class Chemp extends Entity{
 
         this.setData("destination", new Math.Vector2(1,1));
         
-        
+        this.setInteractive();
+        this.on('pointerdown', () => console.log('click'));
 
-        this.state = chempState.Idle;
+        this.state = ChempState.Idle;
 
        
     }
@@ -39,7 +42,7 @@ export class Chemp extends Entity{
 
     update(): void{
         if(!this.initialized){            
-            this.state = chempState.Idle;
+            this.state = ChempState.Idle;
             this.initialized = true;
             setInterval(this.findDestination, 2000);
         }
@@ -61,24 +64,22 @@ export class Chemp extends Entity{
 
 
     findDestination = () => {
-        console.log('finding destination')
-        this.state = chempState.Idle;
-        
-        this.getData('destination')
-        
-
+        this.state = ChempState.Idle;
         switch (this.state){          
-            case chempState.Idle:
+            case ChempState.Idle:
                 this.self.setData('destination', new Math.Vector2( Math.Between(-100,100), Math.Between(-100,100)));
               
                 break;
 
             default:
                 console.log('what da fuck');
-        }
-        
-        
-        
+        } 
     };
     
+    getInfo = () => {
+
+        return [
+            {}
+        ]
+    }
 }

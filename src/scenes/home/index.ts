@@ -12,6 +12,8 @@ import { Chemp } from "../../classes/chemp";
     create() : void{
         this.chempList.push(new Chemp(this, 100,100)); 
         this.physics.world.setBounds(0, 0, 1000,1000);
+
+        this.scene.launch("main-hud");
     }
 
     update() : void{
