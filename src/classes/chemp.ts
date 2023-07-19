@@ -8,7 +8,7 @@ export class Chemp extends Entity{
 
     public state : chempState;
     
-    public position: Math.Vector2; 
+
 
     private speed: number = 10;
 
@@ -26,7 +26,6 @@ export class Chemp extends Entity{
 
         this.setData("destination", new Math.Vector2(1,1));
         
-        this.position = new Math.Vector2(x,y);
         
 
         this.state = chempState.Idle;
@@ -39,14 +38,10 @@ export class Chemp extends Entity{
     }
 
     update(): void{
-        if(!this.initialized){
-            
+        if(!this.initialized){            
             this.state = chempState.Idle;
-
             this.initialized = true;
-
             setInterval(this.findDestination, 2000);
-            setInterval(() => console.log(this.getData("destination")), 1000)
         }
         
         
