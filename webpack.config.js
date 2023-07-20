@@ -16,15 +16,15 @@ const babelOptions = {
       '@babel/preset-env',
       {
         targets: 'last 2 versions, ie 11',
-        modules: false,
-      },
-    ],
-  ],
+        modules: false
+      }
+    ]
+  ]
 };
 
 module.exports = {
     resolve: {
-      extension: ['.js', '.ts']
+      extension: ['.js', '.ts', '.tsx']
     }
   
 }
@@ -33,7 +33,7 @@ module.exports = {
 const config = {
   mode: isProd ? 'production' : 'development',
   context: path.resolve(__dirname, './src'),
-  entry: './index.ts',
+  entry: './index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

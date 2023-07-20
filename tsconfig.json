@@ -4,19 +4,25 @@
         "strict": true,
         "noImplicitReturns": true,
         "noImplicitAny": true,
-        "module": "es6",
+        "lib":["es6","DOM"],
+        "module": "commonJS",
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "esModuleInterop": true,
-        "target": "es5",
+        "target": "ES6",
         "allowJs": true,
         "baseUrl": ".",
+        "jsx":"react",
+        "types": [
+          "react",
+          "react-dom"
+        ]
       },
 
     "include": [
         "./index.d.ts",
         "**/*.ts"
-      ],
+, "src/index.tsx"      ],
       
     "exclude": [
         "node_modules",
