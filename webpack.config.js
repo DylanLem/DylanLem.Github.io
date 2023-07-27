@@ -31,6 +31,7 @@ module.exports = {
 
 
 const config = {
+  
   mode: isProd ? 'production' : 'development',
   context: path.resolve(__dirname, './src'),
   entry: './index.tsx',
@@ -71,7 +72,7 @@ const config = {
 
   resolve: {
     
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', '.tsx'],
   },
   optimization: {
     minimize: true,

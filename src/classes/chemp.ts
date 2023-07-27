@@ -29,8 +29,10 @@ export class Chemp extends Entity{
         this.setData("destination", new Math.Vector2(1,1));
         
         this.setInteractive();
-        this.on('pointerdown', () => console.log('click'));
 
+        
+        this.on('pointerdown', () => console.log("chempspot: " ,  this.x, " " , this.y) )
+        this.on('pointerdownoutside', () => console.log("mousespot: " , this.scene.game.input.mousePointer?.position, " " , this.y) )
         this.state = ChempState.Idle;
 
        
@@ -47,7 +49,7 @@ export class Chemp extends Entity{
             setInterval(this.findDestination, 2000);
         }
         
-        
+        console.log('this might be where it all goes wrong')
         
         
         this.getBody().setVelocity(0);
